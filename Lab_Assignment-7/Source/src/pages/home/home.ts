@@ -1,30 +1,24 @@
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Facebook } from '@ionic-native/facebook';
-import firebase from 'firebase';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  userData = null;
 
-  constructor(public navCtrl: NavController,public facebook:Facebook) {
-
+  constructor(private facebook: Facebook) {
 
   }
-fblogin(){
-  this.facebook.login(['email']).then(res=>{
-    const fc=firebase.auth.FacebookAuthProvider.credential(res.authResponse.accessToken)
-    firebase.auth().signInWithCredential(fc).then(fs=>{
-      alert("firebase sec")
 
-    }).catch(ferr=>{
-      alert("firebase errc")
+  loginWithFB() {
+    this.facebook.login(['email', 'public_profile']).then((response: FacebookLoginResponse) => {
+      this.facebook.api('me?fields=id,name,email,first_name,picture.width(720).height(720).as(picture_large)', []).then(profile => {
+        this.userData = {email: profile['email'], first_name: profile['first_name'], picture: profile['picture_large']['data']['url'], username: profile['name'] };
+      })
     })
+  }
 
-  }).catch(err=>{
-    alert(JSON.stringify(err))
-  })
-}
 }

@@ -1,19 +1,22 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Facebook Login
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
- <button ion-button full (click)="loginWithFB()">Login1</button>
-<ion-card *ngIf="userData">
-  <ion-card-header>
-    {{ userData.username }}
-  </ion-card-header>
-</ion-card>
-LOGIN WITH FACEBOOK   
-</button> 
+  <button ion-button full (click)="loginWithFB()">Login!</button>
+
+  <ion-card *ngIf="userData">
+    <ion-card-header>{{ userData.username }}</ion-card-header>
+<img [src]="userData">
+<ion-card-content>
+  <p>Email: {{ userData.email }}</p>
+  <p>First Name: {{ userData.first_name }}</p>
+</ion-card-content>
+
+  </ion-card>
   
 </ion-content>
