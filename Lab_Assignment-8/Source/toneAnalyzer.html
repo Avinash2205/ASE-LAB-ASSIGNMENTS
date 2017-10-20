@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app.css">
+ <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
+<style>
+body{
+	background:url('data:image/jpeg;base64,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');
+}
+    .form-control{
+    border-radius:8px;
+    width:60%;
+    margin-left:2%;
+}
+.navbar{
+    background: url("http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/09/4k-Wallpapers.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.navbar-brand{
+    color:white;
+    padding-left:37%;
+    font-family: Microsoft sans-serif;
+    font-size:35px;
+}
+.form-group{
+    margin-bottom:-12px;
+}
+#emotionLogo{
+      height:60px;
+    width:60px;
+    float:left;
+    margin-left:50px;
+    margin-top:5px;
+}
+.row{
+    width:60%;
+}
+.table{
+    margin-top:-270px;
+    width:60%;
+    border:1px solid black;
+    border-radius:8px;
+    margin-left:5%;
+}
+#EmotionAnalysisImageIcon{
+    margin-left:1050px;
+    margin-top:70px;
+}
+#analyze{
+    margin-top:-60px;
+    margin-left:950px;
+    background-color: #94b7f3;
+}
+label.btn.btn-primary {
+    background: #94b7f3;
+    margin-left:30px;
+}
+
+    </style>
+
+
+</head>
+<body class="body">
+<div ng-controller="View1Ctrl">
+<nav class="navbar navbar-light bg-faded">
+   <!-- <img src="https://s3.amazonaws.com/kairos-media/icons/facial-expression-detection.png" id="emotionLogo">-->
+    <h1 class="navbar-brand m-b-0">Tone Analyzer
+    </h1>
+</nav>
+
+
+<div class="form-group">
+  <input class="form-control" id="toneAnalysisData" type="text" placeholder="Enter Text">
+    
+    <button type="submit" ng-click="getToneAnalysis()" id="analyze" class="btn btn-primary">Analyze</button>
+</div>
+<!--<img id="EmotionAnalysisImageIcon" src='https://www.ibm.com/blogs/bluemix/wp-content/uploads/2016/02/ToneAnalyzerUpdated.png'>-->
+
+<table class='table' id="data"></table>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+  <script src="app.js"></script>
+
+
+</body>
+</html>
