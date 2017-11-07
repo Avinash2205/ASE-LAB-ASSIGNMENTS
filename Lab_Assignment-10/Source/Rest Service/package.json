@@ -1,0 +1,20 @@
+{
+  "name": "lab 10",
+  "version": "1.0.0",
+  "description": "Lab10 - Mongo CRUD",
+  "main": "Mongoconnection.js",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "mongodb": "^2.2.33",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Mongoconnection.js"
+  },
+  "author": "Avinash Banala",
+  "license": "ISC"
+}
