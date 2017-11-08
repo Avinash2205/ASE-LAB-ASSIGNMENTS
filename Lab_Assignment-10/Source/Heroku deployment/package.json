@@ -1,8 +1,8 @@
 {
-  "name": "lab 10",
+  "name": "foursquareapi",
   "version": "1.0.0",
-  "description": "Lab10 - Mongo CRUD",
-  "main": "Mongoconnection.js",
+  "description": "Lab9 - Mongo CRUD",
+  "main": "server.js",
   "dependencies": {
     "assert": "^1.4.1",
     "body-parser": "^1.17.2",
@@ -13,7 +13,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node Mongoconnection.js"
+    "start": "node server.js"
   },
   "author": "Avinash Banala",
   "license": "ISC"

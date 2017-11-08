@@ -1,7 +1,8 @@
-
 var http = require('http');
 var fs = require("fs");
 var url = require('url');
+var port = process.env.PORT || 8080;
+
 // Create a server
 http.createServer( function (request, response) {  
    // Parse the request containing file name
